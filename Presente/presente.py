@@ -74,7 +74,8 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
             col1.image(caminho_final, use_container_width=True)
         else:
             col2.image(caminho_final, use_container_width=True)
-    st.write("Te amarei até meu ultimo suspiro")
+    st.sucess("Te amarei até meu ultimo suspiro")
+
 
 
 
