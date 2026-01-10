@@ -46,27 +46,39 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
     st.write("### 📸 Nossa Galeria")
     
     # Lista com o nome de todas as suas fotos
-    lista_fotos = [
-        "https://github.com/leonfera/Presente/blob/main/Presente/stark.png", "https://github.com/leonfera/Presente/blob/main/Presente/fri.png", "https://github.com/leonfera/Presente/blob/main/Presente/casa.png", "https://github.com/leonfera/Presente/blob/main/Presente/flauma.png", 
-        "https://github.com/leonfera/Presente/blob/main/Presente/cafe.png", "https://github.com/leonfera/Presente/blob/main/Presente/cy.png", "https://github.com/leonfera/Presente/blob/main/Presente/ivantill.png", "https://github.com/leonfera/Presente/blob/main/Presente/fly.png", 
-        "https://github.com/leonfera/Presente/blob/main/Presente/zhu.png", "https://github.com/leonfera/Presente/blob/main/Presente/maru.png", "https://github.com/leonfera/Presente/blob/main/Presente/oguri.png", "https://github.com/leonfera/Presente/blob/main/Presente/dona.png", 
-        "https://github.com/leonfera/Presente/blob/main/Presente/MC.png", "https://github.com/leonfera/Presente/blob/main/Presente/seth.png", "https://github.com/leonfera/Presente/blob/main/Presente/Denis.png"
-    ]
-    
-   # --- ORGANIZAÇÃO EM COLUNAS (MOSAICO) ---
-    col1, col2 = st.columns(2)
-    
-    for i, nome_foto in enumerate(lista_fotos):
-        # As fotos pares vão na coluna 1, as ímpares na coluna 2
-        if i % 2 == 0:
-            col1.image(nome_foto, use_container_width=True)
-        else:
-            col2.image(nome_foto, use_container_width=True)
-            
-    st.write("---")
+    import os
 
-    st.write("Obrigado por cada segundo ao meu lado ❤️")
+# 1. Volte para a lista simples (apenas os nomes dos arquivos, SEM https)
+lista_fotos = [
+    "stark.png", "fri.png", "casa.png", "flauma.png", 
+    "cafe.png", "cy.png", "ivantill.png", "fly.png", 
+    "zhu.png", "maru.png", "oguri.png", "dona.png", 
+    "MC.png", "seth.png", "Denis.png"
+]
 
+st.write("---")
+st.write("### 📸 Nossa Galeria")
+
+col1, col2 = st.columns(2)
+
+for i, nome_arquivo in enumerate(lista_fotos):
+    # --- LÓGICA DE DETETIVE PARA ACHAR A FOTO ---
+    # Tenta achar a foto na pasta atual
+    if os.path.exists(nome_arquivo):
+        caminho_final = nome_arquivo
+    # Se não achou, tenta achar dentro da pasta 'Presente' (correção para o seu caso)
+    elif os.path.exists(f"Presente/{nome_arquivo}"):
+        caminho_final = f"Presente/{nome_arquivo}"
+    else:
+        # Se não achou em lugar nenhum, avisa qual foto está com problema
+        st.error(f"❌ Não achei a foto: {nome_arquivo}")
+        continue
+    
+    # --- MOSTRA A FOTO ---
+    if i % 2 == 0:
+        col1.image(caminho_final, use_container_width=True)
+    else:
+        col2.image(caminho_final, use_container_width=True)
 
 
 
