@@ -50,7 +50,7 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
         "stark.png", "fri.png", "casa.png", "flauma.png", 
         "cafe.png", "cy.png", "ivantill.png", "fly.png", 
         "zhu.png", "maru.png", "oguri.png", "dona.png", 
-        "MC.png", "seth.png", "Denis.png"
+        "MC.png", "seth.png", "Denis.png", "cast.png"
     ]
 
     st.write("---")
@@ -77,6 +77,7 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
         else:
             col2.image(caminho_final, use_container_width=True)
     st.success("Te amarei até meu ultimo suspiro")
+
 
 
 
