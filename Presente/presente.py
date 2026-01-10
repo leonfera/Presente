@@ -3,10 +3,10 @@ from datetime import date
 
 # --- 1. CONFIGURAÇÃO DA PÁGINA (TEM QUE SER A PRIMEIRA LINHA) ---
 st.set_page_config(page_title="Para Nós", page_icon="❤️")
-
+url="https://www.youtube.com/watch?v=dfmm6ARNl1Q&list=RDdfmm6ARNl1Q&start_radio=1"
 # --- 2. ÁUDIO ---
 # Dica: O autoplay pode ser bloqueado pelo navegador, mas tentamos mesmo assim.
-st.audio("Auras.mp3", start_time=0, autoplay=True, loop=True)
+st.audio(url, start_time=0, autoplay=True, loop=True)
 
 # --- 3. TÍTULOS E TEXTOS ---
 st.title("Feliz aniversário de namoro, amor! ❤️")
@@ -64,4 +64,5 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
             col2.image(nome_foto, use_container_width=True)
             
     st.write("---")
+
     st.write("Obrigado por cada segundo ao meu lado ❤️")
