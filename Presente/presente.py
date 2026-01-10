@@ -3,7 +3,7 @@ from datetime import date
 import os
 
 # --- 1. CONFIGURAÇÃO DA PÁGINA (TEM QUE SER A PRIMEIRA LINHA) ---
-st.set_page_config(page_title="Para Nós", page_icon="❤️")
+st.set_page_config(page_title="Para Gaby", page_icon="❤️")
 url="https://github.com/leonfera/Presente/raw/refs/heads/main/Presente/Auras.mp3"
 # --- 2. ÁUDIO ---
 # Dica: O autoplay pode ser bloqueado pelo navegador, mas tentamos mesmo assim.
@@ -74,6 +74,7 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
             col1.image(caminho_final, use_container_width=True)
         else:
             col2.image(caminho_final, use_container_width=True)
+    st.write("Te amarei até meu ultimo suspiro")
 
 
 
