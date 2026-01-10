@@ -24,6 +24,8 @@ dias_juntos = (hoje - data_inicio).days
 data_inicio2 = date(2023, 6, 2)
 dias_juntos2 = (hoje - data_inicio2).days
 
+st.image("Presente/nos.jpeg")
+
 # Exibindo os números lado a lado (fica mais organizado)
 col_a, col_b = st.columns(2)
 col_a.metric(label="Dias de vida juntos", value=f"{dias_juntos} dias")
@@ -75,6 +77,7 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
         else:
             col2.image(caminho_final, use_container_width=True)
     st.success("Te amarei até meu ultimo suspiro")
+
 
 
 
