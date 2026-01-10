@@ -3,7 +3,7 @@ from datetime import date
 
 # --- 1. CONFIGURAÇÃO DA PÁGINA (TEM QUE SER A PRIMEIRA LINHA) ---
 st.set_page_config(page_title="Para Nós", page_icon="❤️")
-url="https://www.youtube.com/watch?v=dfmm6ARNl1Q&list=RDdfmm6ARNl1Q&start_radio=1"
+url="https://github.com/leonfera/Presente/raw/refs/heads/main/Presente/Auras.mp3"
 # --- 2. ÁUDIO ---
 # Dica: O autoplay pode ser bloqueado pelo navegador, mas tentamos mesmo assim.
 st.audio(url, start_time=0, autoplay=True, loop=True)
@@ -66,3 +66,4 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
     st.write("---")
 
     st.write("Obrigado por cada segundo ao meu lado ❤️")
+
