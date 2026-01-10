@@ -42,11 +42,6 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
     st.balloons()
     st.success("Te amo do fundo do meu coração! Você é minha pessoa favorita e viveria uma vida só com você. Não esqueça o quanto é especial para mim.")
     
-    st.write("---")
-    st.write("### 📸 Nossa Galeria")
-    
-    # Lista com o nome de todas as suas fotos
-    import os
 
 # 1. Volte para a lista simples (apenas os nomes dos arquivos, SEM https)
 lista_fotos = [
