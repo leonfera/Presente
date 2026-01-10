@@ -47,10 +47,10 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
     
     # Lista com o nome de todas as suas fotos
     lista_fotos = [
-        "stark.png", "fri.png", "casa.png", "flauma.png", 
-        "cafe.png", "cy.png", "ivantill.png", "fly.png", 
-        "zhu.png", "maru.png", "oguri.png", "dona.png", 
-        "MC.png", "seth.png", "Denis.png"
+        "https://github.com/leonfera/Presente/blob/main/Presente/stark.png", "https://github.com/leonfera/Presente/blob/main/Presente/fri.png", "https://github.com/leonfera/Presente/blob/main/Presente/casa.png", "https://github.com/leonfera/Presente/blob/main/Presente/flauma.png", 
+        "https://github.com/leonfera/Presente/blob/main/Presente/cafe.png", "https://github.com/leonfera/Presente/blob/main/Presente/cy.png", "https://github.com/leonfera/Presente/blob/main/Presente/ivantill.png, "https://github.com/leonfera/Presente/blob/main/Presente/fly.png", 
+        "https://github.com/leonfera/Presente/blob/main/Presente/zhu.png", "https://github.com/leonfera/Presente/blob/main/Presente/maru.png", "https://github.com/leonfera/Presente/blob/main/Presente/oguri.png", "https://github.com/leonfera/Presente/blob/main/Presente/dona.png", 
+        "https://github.com/leonfera/Presente/blob/main/Presente/MC.png", "https://github.com/leonfera/Presente/blob/main/Presente/seth.png", "https://github.com/leonfera/Presente/blob/main/Presente/Denis.png"
     ]
     
    # --- ORGANIZAÇÃO EM COLUNAS (MOSAICO) ---
@@ -66,6 +66,7 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
     st.write("---")
 
     st.write("Obrigado por cada segundo ao meu lado ❤️")
+
 
 
 
