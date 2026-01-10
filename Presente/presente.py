@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import date
+import os
 
 # --- 1. CONFIGURAÇÃO DA PÁGINA (TEM QUE SER A PRIMEIRA LINHA) ---
 st.set_page_config(page_title="Para Nós", page_icon="❤️")
@@ -54,10 +55,16 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
     
     # --- ORGANIZAÇÃO EM COLUNAS (MOSAICO) ---
     # Isso cria 2 colunas para as fotos não ficarem uma tripa gigante
+    # --- ORGANIZAÇÃO EM COLUNAS (MOSAICO) ---
     col1, col2 = st.columns(2)
     
     for i, nome_foto in enumerate(lista_fotos):
-        # As fotos pares vão na coluna 1, as ímpares na coluna 2
+        # Verifica se o arquivo existe antes de tentar abrir
+        if not os.path.exists(nome_foto):
+            st.error(f"⚠️ ERRO: A foto '{nome_foto}' não foi encontrada na pasta!")
+            continue # Pula para a próxima foto sem travar o site
+
+        # Se a foto existe, mostra ela
         if i % 2 == 0:
             col1.image(nome_foto, use_container_width=True)
         else:
@@ -66,4 +73,5 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
     st.write("---")
 
     st.write("Obrigado por cada segundo ao meu lado ❤️")
+
 
