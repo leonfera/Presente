@@ -44,36 +44,36 @@ if st.button('Clique aqui para ver alguns momentos nossos') or st.session_state.
     
 
 # 1. Volte para a lista simples (apenas os nomes dos arquivos, SEM https)
-lista_fotos = [
-    "stark.png", "fri.png", "casa.png", "flauma.png", 
-    "cafe.png", "cy.png", "ivantill.png", "fly.png", 
-    "zhu.png", "maru.png", "oguri.png", "dona.png", 
-    "MC.png", "seth.png", "Denis.png"
-]
+    lista_fotos = [
+        "stark.png", "fri.png", "casa.png", "flauma.png", 
+        "cafe.png", "cy.png", "ivantill.png", "fly.png", 
+        "zhu.png", "maru.png", "oguri.png", "dona.png", 
+        "MC.png", "seth.png", "Denis.png"
+    ]
 
-st.write("---")
-st.write("### 📸 Nossa Galeria")
+    st.write("---")
+    st.write("### 📸 Nossa Galeria")
 
-col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-for i, nome_arquivo in enumerate(lista_fotos):
-    # --- LÓGICA DE DETETIVE PARA ACHAR A FOTO ---
-    # Tenta achar a foto na pasta atual
-    if os.path.exists(nome_arquivo):
-        caminho_final = nome_arquivo
-    # Se não achou, tenta achar dentro da pasta 'Presente' (correção para o seu caso)
-    elif os.path.exists(f"Presente/{nome_arquivo}"):
-        caminho_final = f"Presente/{nome_arquivo}"
-    else:
-        # Se não achou em lugar nenhum, avisa qual foto está com problema
-        st.error(f"❌ Não achei a foto: {nome_arquivo}")
-        continue
-    
-    # --- MOSTRA A FOTO ---
-    if i % 2 == 0:
-        col1.image(caminho_final, use_container_width=True)
-    else:
-        col2.image(caminho_final, use_container_width=True)
+    for i, nome_arquivo in enumerate(lista_fotos):
+        # --- LÓGICA DE DETETIVE PARA ACHAR A FOTO ---
+        # Tenta achar a foto na pasta atual
+        if os.path.exists(nome_arquivo):
+            caminho_final = nome_arquivo
+        # Se não achou, tenta achar dentro da pasta 'Presente' (correção para o seu caso)
+        elif os.path.exists(f"Presente/{nome_arquivo}"):
+            caminho_final = f"Presente/{nome_arquivo}"
+        else:
+            # Se não achou em lugar nenhum, avisa qual foto está com problema
+            st.error(f"❌ Não achei a foto: {nome_arquivo}")
+            continue
+        
+        # --- MOSTRA A FOTO ---
+        if i % 2 == 0:
+            col1.image(caminho_final, use_container_width=True)
+        else:
+            col2.image(caminho_final, use_container_width=True)
 
 
 
