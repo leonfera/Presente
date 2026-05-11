@@ -24,7 +24,7 @@ dias_juntos = (hoje - data_inicio).days
 data_inicio2 = date(2023, 6, 2)
 dias_juntos2 = (hoje - data_inicio2).days
 
-st.video("https://youtu.be/vz9E8HflQ4k") 
+st.video("https://youtu.be/Gvq_uFbbPbk") 
 st.video("https://youtu.be/-KpbYLA0GsA")
 
 # Exibindo os números lado a lado (fica mais organizado)
