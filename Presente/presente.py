@@ -24,8 +24,8 @@ dias_juntos = (hoje - data_inicio).days
 data_inicio2 = date(2023, 6, 2)
 dias_juntos2 = (hoje - data_inicio2).days
 
-st.video("https://1drv.ms/v/c/7dc94f469dfc44e5/IQCCG1WOELSvS5nvruMx8MFxAbasa0kRvvJg5oo6S4gU4Yg?e=447wbj") 
-st.video("https://1drv.ms/v/c/7dc94f469dfc44e5/IQCCG1WOELSvS5nvruMx8MFxAbasa0kRvvJg5oo6S4gU4Yg?e=zWgZXr")
+st.video("https://youtu.be/vz9E8HflQ4k") 
+st.video("https://youtu.be/-KpbYLA0GsA")
 
 # Exibindo os números lado a lado (fica mais organizado)
 col_a, col_b = st.columns(2)
